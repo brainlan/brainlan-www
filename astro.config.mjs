@@ -1,6 +1,6 @@
-import { defineConfig } from "astro/config";
-
+import node from "@astrojs/node";
 import vercel from "@astrojs/vercel/serverless";
+import { defineConfig } from "astro/config";
 
 let adapter = vercel({
   webAnalytics: {
@@ -11,7 +11,11 @@ let adapter = vercel({
 
 let site = "https://www.brainlan.com";
 
-// https://astro.build/config
+if (process.argv[3] === "--node") {
+  adapter = node({ mode: "standalone" });
+  site = "http://localhost:4321";
+}
+
 export default defineConfig({
   site,
   output: "hybrid",
