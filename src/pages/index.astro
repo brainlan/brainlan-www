@@ -1,16 +1,13 @@
 ---
+import SectionTitle from "../components/SectionTitle.astro";
+import SectionPoint from "../components/SectionPoint.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
+Astro.response.headers.set("Cache-Control", "max-age=0, s-maxage=1, stale-while-revalidate=59");
+const lang = await import("../locale/json/en.json");
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={lang?.pages.index.title} description={lang?.pages.index.description}>
+  <SectionTitle />
+  <SectionPoint />
+</BaseLayout>

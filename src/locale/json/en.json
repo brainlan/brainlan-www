@@ -1,0 +1,40 @@
+{
+  "pages": {
+    "404": {
+      "title": "404",
+      "description": "Not found"
+    },
+
+    "index": {
+      "title": "Brainlan",
+      "description": "Description"
+    },
+    "blogindex": {
+      "title": "Brainlan",
+      "description": "Description"
+    }
+  },
+  "components": {
+    "navbardefault": {
+      "services": "Services",
+      "database": "Databases",
+      "interface": "Interfaces",
+      "lisa": "Lisa",
+      "late": "Late 2025",
+      "documentation": "Documentation",
+      "blog": "Blog"
+    },
+    "sectiontitle": {
+      "new": "New",
+      "banner": "Brainlan website in construction! See our documentation",
+      "title": "We believed in the Human's operating system",
+      "description": "Brainlan create solutions based on structured human knowledge"
+    },
+    "sectionpoint": {
+      "title": "Knowledge through Open-Source Databases",
+      "description_1": "Brainlan is a pioneering association committed to democratizing access to human knowledge through the creation and maintenance of open-source databases. Our mission is to foster collaboration, innovation, and inclusivity in the pursuit of expanding the collective understanding of the world",
+      "description_2": "We envision a future where every individual, regardless of background or location, has equal access to the vast wealth of human knowledge. Through our open-source databases, we aim to break down barriers to information, empower communities, and inspire meaningful contributions to society",
+      "description_3": "Join us in our mission to create open-source databases on human knowledge! Whether you're a researcher, developer, educator, or simply someone passionate about learning, there are countless ways to contribute."
+    }
+  }
+}
