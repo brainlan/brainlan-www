@@ -22,7 +22,8 @@
     "astro": "^4.4.1",
     "flowbite": "^2.3.0",
     "flowbite-typography": "^1.0.3",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
     "prettier": "^3.2.5",

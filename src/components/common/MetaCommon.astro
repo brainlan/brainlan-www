@@ -1,0 +1,18 @@
+---
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title , description  } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{canonicalURL &&<link rel="canonical" href={canonicalURL} />}
+<link rel="manifest" href="/manifest.webmanifest" />
+{title &&<meta name="title" content={title} />}
+{description &&<meta name="description" content={description} />}
+<!-- <meta name="theme-color" content="white" /> -->
+{title &&<title>{title}</title>}

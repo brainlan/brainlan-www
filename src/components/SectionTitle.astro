@@ -1,5 +1,9 @@
 ---
+import { Image } from "astro:assets";
+import mockup from "../assets/tmp/mockup.svg"
 const lang = await import("../locale/json/en.json");
+
+
 ---
 
 <section-title>
@@ -15,9 +19,8 @@ const lang = await import("../locale/json/en.json");
       <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">{lang?.components.sectiontitle.title}</h1>
       <p class="mb-8 text-lg font-normal text-gray-500 dark:text-gray-200 sm:px-16 lg:px-48 lg:text-xl">{lang?.components.sectiontitle.description}</p>
     </div>
-    <img class="z-1 mx-auto mb-5 rounded-lg border border-gray-200 shadow-xl dark:hidden dark:border-gray-600 lg:mb-8" src="dashboard-mockup.svg" alt="dashboard overview" />
-    <img class="z-1 mx-auto mb-5 hidden rounded-lg border border-gray-200 shadow-xl dark:block dark:border-gray-600 lg:mb-8" src="dashboard-mockup-dark.svg" alt="dashboard overview dark" />
-  </section>
+    <Image class="mx-auto mb-5 rounded-lg border border-gray-200 shadow-xl dark:hidden dark:border-gray-600 lg:mb-8" src={mockup} alt="Mockup"/>
+   </section>
 </section-title>
 
 <script>
