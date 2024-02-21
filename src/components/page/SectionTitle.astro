@@ -1,15 +1,18 @@
 ---
+
 import { Image } from "astro:assets";
-import mockup from "../assets/tmp/mockup.svg"
-const lang = await import("../locale/json/en.json");
+import mockup from "../../assets/tmp/mockup.svg"
+
+
+const lang = await import("../../locale/json/en.json");
 
 
 ---
 
 <section-title>
-  <section>
-    <div class="mx-auto max-w-screen-xl px-4 py-8 text-center lg:py-16">
-      <a href="https://docs.brainlan.com" class="mb-7 inline-flex items-center justify-between rounded-full bg-gray-100 px-1 py-1 pe-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800">
+  <section class="px-4">
+    <div class="mx-auto max-w-screen-xl py-8 text-center lg:py-16">
+      <a href="https://blog.brainlan.com" class="mb-7 inline-flex items-center justify-between rounded-full bg-gray-100 px-1 py-1 pe-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800">
         <span class="bg-primary-600 me-3 rounded-full px-4 py-1.5 text-xs text-white first-letter:capitalize">{lang?.components.sectiontitle.new}</span>
         <span class="text-sm font-medium">{lang?.components.sectiontitle.banner}</span>
         <svg class="ms-2 h-2.5 w-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
@@ -19,8 +22,10 @@ const lang = await import("../locale/json/en.json");
       <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">{lang?.components.sectiontitle.title}</h1>
       <p class="mb-8 text-lg font-normal text-gray-500 dark:text-gray-200 sm:px-16 lg:px-48 lg:text-xl">{lang?.components.sectiontitle.description}</p>
     </div>
-    <Image class="mx-auto mb-5 rounded-lg border border-gray-200 shadow-xl dark:hidden dark:border-gray-600 lg:mb-8" src={mockup} alt="Mockup"/>
+    <Image class="mx-auto my-2 rounded-lg border border-gray-200 shadow-xl dark:hidden dark:border-gray-600" src={mockup} alt="Mockup"/>
    </section>
+
+
 </section-title>
 
 <script>
