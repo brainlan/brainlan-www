@@ -1,5 +1,4 @@
 ---
-
 import NavbarDefault from "../components/share/NavbarDefault.astro";
 import Favicons from "../components/common/Favicons.astro";
 import MetaCommon from "../components/common/MetaCommon.astro";
@@ -19,9 +18,12 @@ const { title, description, image } = Astro.props;
   <head>
     <MetaCommon title={title} description={description} />
     <Favicons />
-    <MetaOg title={title} description={description} image={image}/>
-    <MetaTwitter title={title} description={description} image={image}></MetaTwitter>
-    <meta http-equiv="Content-Security-Policy" content="img-src 'self' https://*.supabase.co data:; default-src 'self' 'unsafe-inline' https://*.supabase.co https://*.vercel-scripts.com https://cdn.vercel-insights.com https://vitals.vercel-insights.com https://vitals.vercel-analytics.com" />
+    <MetaOg title={title} description={description} image={image} />
+    <MetaTwitter title={title} description={description} image={image} />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="img-src 'self' https://*.supabase.co data:; default-src 'self' 'unsafe-inline' https://*.supabase.co https://*.vercel-scripts.com https://cdn.vercel-insights.com https://vitals.vercel-insights.com https://vitals.vercel-analytics.com"
+    />
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body class="dark:bg-gray-700">

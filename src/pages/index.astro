@@ -2,13 +2,20 @@
 import SectionTitle from "../components/page/SectionTitle.astro";
 import SectionPoint from "../components/page/SectionPoint.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import favIconSvg from '../assets/favicons/favicon.svg';
+import favIconSvg from "../assets/favicons/favicon.svg";
 
-Astro.response.headers.set("Cache-Control", "max-age=0, s-maxage=1, stale-while-revalidate=59");
+Astro.response.headers.set(
+  "Cache-Control",
+  "max-age=0, s-maxage=1, stale-while-revalidate=59",
+);
 const lang = await import("../locale/json/en.json");
 ---
 
-<BaseLayout title={lang?.pages.index.title} description={lang?.pages.index.description} image={favIconSvg.src}>
+<BaseLayout
+  title={lang?.pages.index.title}
+  description={lang?.pages.index.description}
+  image={favIconSvg.src}
+>
   <SectionTitle />
   <SectionPoint />
 </BaseLayout>

@@ -4,5 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const lang = await import("../locale/json/en.json");
 ---
 
-<BaseLayout title={lang?.pages.index.title} description={lang?.pages.index.description} />
-
+<BaseLayout
+  title={lang?.pages.index.title}
+  description={lang?.pages.index.description}
+/>
