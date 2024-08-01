@@ -15,6 +15,7 @@ const lang = await import("../locale/json/en.json");
   title={lang?.pages.index.title}
   description={lang?.pages.index.description}
   image={favIconSvg.src}
+  cspContent="img-src 'self' https://*.supabase.co data:; default-src 'self' 'unsafe-inline' https://*.supabase.co https://*.vercel-scripts.com https://cdn.vercel-insights.com https://vitals.vercel-insights.com https://vitals.vercel-analytics.com"
 >
   <SectionTitle />
   <SectionPoint />

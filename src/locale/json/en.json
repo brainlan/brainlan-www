@@ -2,7 +2,9 @@
   "pages": {
     "404": {
       "title": "404",
-      "description": "Not found"
+      "description": "Not found",
+      "first": "Something's missing.",
+      "details": "Sorry, we can't find that page. You'll find lots to explore on the home page."
     },
 
     "index": {

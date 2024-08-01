@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+
+import myImage from "../../assets/tmp/sampleface.jpeg";
+const lang = await import("../../locale/json/en.json");
+---
+
+<user-avatars>
+  <Image src={myImage} alt="A description." />
+  <script>
+    class UserAvatar extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      async connectedCallback() {
+        console.log("UserAvatar");
+      }
+    }
+    customElements.define("user-avatars", UserAvatar);
+  </script>
+</user-avatars>
+
+---
+

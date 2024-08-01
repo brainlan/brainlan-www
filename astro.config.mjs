@@ -23,4 +23,7 @@ export default defineConfig({
   output: "hybrid",
   adapter,
   integrations: [sitemap(), tailwind()],
+  experimental: {
+    serverIslands: true,
+  },
 });

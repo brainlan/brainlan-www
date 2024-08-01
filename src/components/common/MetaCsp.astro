@@ -1,0 +1,8 @@
+---
+interface Props {
+  content?: string;
+}
+const { content } = Astro.props;
+---
+
+{content && <meta http-equiv="Content-Security-Policy" content={content} />}

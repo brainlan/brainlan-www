@@ -4,14 +4,16 @@ import Favicons from "../components/common/Favicons.astro";
 import MetaCommon from "../components/common/MetaCommon.astro";
 import MetaOg from "../components/common/MetaOg.astro";
 import MetaTwitter from "../components/common/MetaTwitter.astro";
+import MetaCsp from "@components/common/MetaCsp.astro";
 
 interface Props {
   title?: string;
   description?: string;
   image?: string;
+  cspContent?:string;
 }
 
-const { title, description, image } = Astro.props;
+const { title, description, image,cspContent } = Astro.props;
 ---
 
 <html lang={Astro.preferredLocale} class="overflow-x-hidden scroll-smooth">
@@ -20,10 +22,8 @@ const { title, description, image } = Astro.props;
     <Favicons />
     <MetaOg title={title} description={description} image={image} />
     <MetaTwitter title={title} description={description} image={image} />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="img-src 'self' https://*.supabase.co data:; default-src 'self' 'unsafe-inline' https://*.supabase.co https://*.vercel-scripts.com https://cdn.vercel-insights.com https://vitals.vercel-insights.com https://vitals.vercel-analytics.com"
-    />
+    <MetaCsp content={cspContent}></MetaCsp>
+
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body class="dark:bg-gray-700">
